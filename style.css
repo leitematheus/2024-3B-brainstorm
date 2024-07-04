@@ -14,3 +14,26 @@
 --fonte-texto:"Quicksand", sans-serif;
 --texto-titulo:"Open Sans", sans-serif;
 }
+
+body{
+    background-color: var(--hookers-green);
+    color: var(--ash-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: var(--fonte-texto);
+}
+
+.caixa-principal{
+    background-color: var(--cambridge-blue);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    padding: 20px;
+}
+
+.titulo{
+    color: var(--dark-slate-gray);
+    font-family: var(--fonte-titulo);
+}
