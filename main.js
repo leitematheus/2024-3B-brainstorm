@@ -5,24 +5,24 @@ const caixaResultado = document.querySelectorAll('.caixa-resultado')
 const textoResultado = document.querySelectorAll('.texto-resultado')
 const perguntas = [
     {
-        enunciado: 'Paulo tem 17 anos de idade, e pensando sobre qual carreira seguir, ele para pensar o que ele faz de melhor e gosta de fazer.<br>Nisso lhe vem duas opcões em sua cabeça:',
+        enunciado: 'Nome, mora em Foz do Iguaçu, que é mundialmente conhecido pelas Cataratas, e nome sabe a importância de preservar a água ainda mais em sua cidade, por ser um lugar turístico relacionado a água, nisso nome decide:',
         alternativas: [
-            'Ele escolhe fazer ciência da computação, e ganhar razoavelmente, mas que futuramente pode melhora.',
-            'Ele escolhe um emprego que ganha muito mais que ciência da computação, mas não gosta da área.'
+            'Nome escolhe estudar para futuramente trabalhar na Itaipu, e preservar a água e fornecer para o seu país e o país vizinho!',
+            'Nome pensa que não é quaificado(a) para este trabalho, e achar melhor deixar na mão de outra pessoa o seu futuro e o da água.'
         ]
     },
     {
-        enunciado: 'Pergunta2',
+        enunciado: 'Nome começa a trabalhar na Itaipu, e lá surge uma oportunidade exelente para cuidar da qualidade da água do lago da Itaipu, nome aproveita essa oportunidade?',
         alternativas: [
-            'alternativa 1',
-            'alternativa 2'
+            'Sim, pois esse é o seu sonho e você se ver responsável em preservar a água da sua cidade.',
+            'Não quer esse cargo, pois o seu salário já está ótimo assim e não quer saber mais de preservar a água, porque a sua condição financeira subiu à cabeça.'
         ]
     },
     {
-        enunciado: 'Pergunta3',
+        enunciado: 'Nome começa a cuidar do lago da Itaipu e lá descobre um novo tipo de bactéria presnte na água, o que nome deve fazer?',
         alternativas: [
-            'alternativa 1',
-            'alternativa 2'
+            'Nome decide não avisar, pois pensa que deve ser uma bactéria inofensiva e não causará nenhum mal',
+            'Nome avisa aos supervisores, e começa a trabalhar como chefe de outros cientistas, contra essa nova bactéria.'
         ]
     },
     {
