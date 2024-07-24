@@ -1,8 +1,8 @@
-const caixaPrincipal = document.querySelectorAll('.caixa-principal')
-const caixaPerguntas = document.querySelectorAll('.caixa-perguntas')
-const caixaAlternativas = document.querySelectorAll('.caixa-alternativas')
-const caixaResultado = document.querySelectorAll('.caixa-resultado')
-const textoResultado = document.querySelectorAll('.texto-resultado')
+const caixaPrincipal = document.querySelector('.caixa-principal')
+const caixaPerguntas = document.querySelector('.caixa-perguntas')
+const caixaAlternativas = document.querySelector('.caixa-alternativas')
+const caixaResultado = document.querySelector('.caixa-resultado')
+const textoResultado = document.querySelector('.texto-resultado')
 const perguntas = [
     {
         enunciado: 'Nome, mora em Foz do Iguaçu, que é mundialmente conhecido pelas Cataratas, e nome sabe a importância de preservar a água ainda mais em sua cidade, por ser um lugar turístico relacionado a água, nisso nome decide:',
@@ -26,34 +26,58 @@ const perguntas = [
         ]
     },
     {
-        enunciado: 'Pergunta4',
+        enunciado: 'Nome perde o emprego e fica desempregado, pois a bactéria se propagou, e levou 10% da cidade à óbito e terá que cumprir uma pena.',
         alternativas: [
-            'alternativa 1',
-            'alternativa 2'
+            'Nome decide se render, e cumprir a pena pela sua negligência, para pelo menos fazer algo certo na vida.',
+            'Nome decide contratar um advogado e escapar da sua condenação, e viver uma vida em paz'
         ]
     },
     {
-        enunciado: 'Pergunta5',
+        enunciado: 'Nome anula todas as bactéria salvando a sociedade, e ganha a chave da cidade!',
         alternativas: [
-            'alternativa 1',
-            'alternativa 2'
+            'Nome decedi se aposentar aos 40, pois já têm muitos feitos em sua carreira profissional e quer deixar o jovens à terem oportunidades.',
+            'Nome decide entrar mais afundo na sua profissão, e depois de 20 anos se aposentar.'
         ]
     }
 ]
 
 let atual = 0;
 let perguntaAtual;
+let historiaFinal = " ";
 
 function mostraPergunta(){
+    if(atual >= perguntas.length){
+        mostreResultado();
+        return;
+    }
     perguntaAtual = perguntas[atual];
-    caixaPerguntas.textContent = perguntaAtual.enunciado;  
+    caixaPerguntas.textContent = perguntaAtual.enunciado;
+    caixaAlternativas.textContent = "";
+    mostraAlternativas();
+
 }
-mostraAlternativas();
 
 function mostraAlternativas(){
     for(const alternativa of perguntaAtual.alternativas){
-        const botaoAlternativas = document.createElmeent("button")
-        botaoAlternativas.textContent = alternativas;
+        const botaoAlternativas = document.createElement("button");
+        botaoAlternativas.textContent = alternativa
         caixaAlternativas.appendChild(botaoAlternativas)
     }
 }
+
+function respostaSelecionada(opcaoSelecionada){
+    const afirmacoes = opcaoSelecionada.afirmacao;
+    historiaFinal += afirmacoes + " ";
+    atual++;
+    mostraPergunta();
+}
+
+function mostreResultado(){
+    caixaPerguntas.text = " Em 2049...";
+    textoResultado.textContent = historiaFinal;
+    caixaAlternativas.textContent = " ";
+}
+mostraPergunta();
+
+
+
