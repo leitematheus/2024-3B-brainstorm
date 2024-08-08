@@ -7,22 +7,32 @@ const perguntas = [
     {
         enunciado: 'Nome, mora em Foz do Iguaçu, que é mundialmente conhecido pelas Cataratas, e nome sabe a importância de preservar a água ainda mais em sua cidade, por ser um lugar turístico relacionado a água, nisso nome decide:',
         alternativas: [
-            'Nome escolhe estudar para futuramente trabalhar na Itaipu, e preservar a água e fornecer para o seu país e o país vizinho!',
-            'Nome pensa que não é quaificado(a) para este trabalho, e achar melhor deixar na mão de outra pessoa o seu futuro e o da água.'
+         {
+            texto: 'Nome escolhe estudar para futuramente trabalhar na Itaipu, e preservar a água e fornecer para o seu país e o país vizinho!',
+            afirmação: 'Nome pensa que não é quaificado(a) para este trabalho, e acha melhor deixar na mão de outra pessoa o seu futuro e o da água.'
+         },
+         {
+            texto: 'Nome começa a trabalhar na Itaipu, e lá surge uma oportunidade exelente para cuidar da qualidade da água do lago da Itaipu, nome aproveita essa oportunidade?',
+            afirmacao: 'Nome vira mendingo e começa na vida do crime.'
+         }
         ]
     },
     {
         enunciado: 'Nome começa a trabalhar na Itaipu, e lá surge uma oportunidade exelente para cuidar da qualidade da água do lago da Itaipu, nome aproveita essa oportunidade?',
         alternativas: [
-            'Sim, pois esse é o seu sonho e você se ver responsável em preservar a água da sua cidade.',
-            'Não quer esse cargo, pois o seu salário já está ótimo assim e não quer saber mais de preservar a água, porque a sua condição financeira subiu à cabeça.'
+        {
+            texto: 'Sim, pois esse é o seu sonho e você se ver responsável em preservar a água da sua cidade.',
+            afirmacao:'Não quer esse cargo, pois o seu salário já está ótimo assim e não quer saber mais de preservar a água, porque a sua condição financeira subiu à cabeça.'
+        }
         ]
     },
     {
         enunciado: 'Nome começa a cuidar do lago da Itaipu e lá descobre um novo tipo de bactéria presnte na água, o que nome deve fazer?',
         alternativas: [
-            'Nome decide não avisar, pois pensa que deve ser uma bactéria inofensiva e não causará nenhum mal',
-            'Nome avisa aos supervisores, e começa a trabalhar como chefe de outros cientistas, contra essa nova bactéria.'
+    {
+           texto: 'Nome decide não avisar, pois pensa que deve ser uma bactéria inofensiva e não causará nenhum mal',
+            afirmacao: 'Nome avisa aos supervisores, e começa a trabalhar como chefe de outros cientistas, contra essa nova bactéria.'
+    }
         ]
     },
     {
@@ -60,7 +70,8 @@ function mostraPergunta(){
 function mostraAlternativas(){
     for(const alternativa of perguntaAtual.alternativas){
         const botaoAlternativas = document.createElement("button");
-        botaoAlternativas.textContent = alternativa
+        botaoAlternativas.textContent = alternativa.texto;
+        botaoAlternativas.addEventListener('click', () => respostaSelecionada(alternativa));
         caixaAlternativas.appendChild(botaoAlternativas)
     }
 }
@@ -73,7 +84,7 @@ function respostaSelecionada(opcaoSelecionada){
 }
 
 function mostreResultado(){
-    caixaPerguntas.text = " Em 2049...";
+    caixaPerguntas.textContent = " Em 2049...";
     textoResultado.textContent = historiaFinal;
     caixaAlternativas.textContent = " ";
 }

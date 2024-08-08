@@ -37,12 +37,13 @@ body{
 .titulo{
     color: var(--dark-slate-gray);
     font-family: var(--fonte-titulo);
+    padding: 15px;
 }
 
 button{
     background-color: var(--ash-gray);
     color: var(--charcoal);
-    border: none;
+    border: 15px;
     border-radius: 15px;
     padding: 10px;
     transition: 0.3s;
