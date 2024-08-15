@@ -3,14 +3,14 @@ const caixaPerguntas = document.querySelector('.caixa-perguntas')
 const caixaAlternativas = document.querySelector('.caixa-alternativas')
 const caixaResultado = document.querySelector('.caixa-resultado')
 const textoResultado = document.querySelector('.texto-resultado')
-let nome = prompt('Digite o seu nome aqui:')
+let nome = prompt('Digite o seu nome aqui:');
 console.log(nome)
 const perguntas = [
     {
-        enunciado: `${nome} tem 20 anos e mora em Foz do Iguaçu, que é mundialmente conhecido pelas Cataratas, e nome sabe a importância de preservar a água ainda mais em sua cidade, por ser um lugar turístico relacionado a água, nisso nome decide:`,
+        enunciado: `${nome} tem 20 anos e mora em Foz do Iguaçu, que é mundialmente conhecido pelas Cataratas, e ${nome} sabe a importância de preservar à água ainda mais em sua cidade, por ser um lugar turístico relacionado a água. Diante disso ${nome} decide:`,
         alternativas: [
             {
-                afirmacao: nome + ' escolhe estudar para futuramente trabalhar na Itaipu, e preservar a água e fornecer para o seu país e o país vizinho!',
+                afirmacao: `${nome} escolhe estudar para futuramente trabalhar na Itaipu, e preservar a água e fornecer para o seu país e o país vizinho!`,
                 texto: 'Nome sempre gostou da Itaipu e sempre se importou com todos ao seu redor.'
             },
             {
