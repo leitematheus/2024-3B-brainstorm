@@ -11,37 +11,37 @@ const perguntas = [
         alternativas: [
             {
                 afirmacao: `${nome} escolhe estudar para futuramente trabalhar na Itaipu, e preservar a água e fornecer para o seu país e o país vizinho!`,
-                texto: 'Nome sempre gostou da Itaipu e sempre se importou com todos ao seu redor.'
+                texto: `${nome} sempre gostou da Itaipu e sempre se importou com todos ao seu redor.`
             },
             {
-                afirmacao: 'Nome faz um concurso público e entra na Itaipu, e se sai muito bem, pois passou em primeiro lugar!',
-                texto: 'Nome quer ingressar logo na sua carreira.'
+                afirmacao: `${nome} faz um concurso público e entra na Itaipu, e se sai muito bem, pois passou em primeiro lugar!`,
+                texto: `${nome} quer ingressar logo na sua carreira.`
             }
         ]
     },
     {
-        enunciado: 'Nome com 22 anos começa a cuidar do lago da Itaipu e lá descobre um novo tipo de bactéria presnte na água, o que nome deve fazer?',
+        enunciado: `${nome} com 22 anos começa a cuidar do lago da Itaipu e lá descobre um novo tipo de bactéria presnte na água, o que nome deve fazer?`,
         alternativas: [
             {
-                afirmacao: 'Nome avisa aos supervisores, e começa a trabalhar como chefe de outros cientistas, contra essa nova bactéria.',
-                texto: 'Nome quer salvar a todos.'
+                afirmacao: `${nome} avisa aos supervisores, e começa a trabalhar como chefe de outros cientistas, contra essa nova bactéria.`,
+                texto: `${nome} quer salvar a todos.`
             },
             {
-                afirmacao: 'Nome anula as bactérias sozinho.',
-                texto: 'Nome salva a todos sozinho.'
+                afirmacao: `${nome} anula as bactérias sozinho.`,
+                texto: `${nome} salva a todos sozinho.`
             }
         ]
     },
     {
-        enunciado: 'Nome anula todas as bactérias, e acaba sendo promovido tendo uma ótima carreira.',
+        enunciado: `${nome} anula todas as bactérias, e acaba sendo promovido tendo uma ótima carreira.`,
         alternativas: [
             {
-                afirmacao: 'Nome decedi se aposentar aos 40, pois já têm muitos feitos em sua carreira profissional e quer deixar o jovens terem novas oportunidades.',
-                texto: 'Nome está feliz e em paz consigo mesmo.'
+                afirmacao: `${nome} decedi se aposentar aos 40, pois já têm muitos feitos em sua carreira profissional e quer deixar o jovens terem novas oportunidades.`,
+                texto: `${nome} está feliz e em paz consigo mesmo.`
             },
             {
-                afirmacao: 'Nome se aposenta aos 60 e vive tranqulo, mas sem forças para aproveitar o resto da vida.',
-                texto: 'Nome continua na carreira'
+                afirmacao: `${nome} se aposenta aos 60 e vive tranqulo, mas sem forças para aproveitar o resto da vida.`,
+                texto: `${nome} continua na carreira.`
             }
         ]
     },
@@ -73,7 +73,7 @@ function mostraAlternativas(){
 }
 
 function respostaSelecionada(opcaoSelecionada){
-    const afirmacoes = opcaoSelecionada.afirmacao;
+    const afirmacoes =  opcaoSelecionada.afirmacao;
     historiaFinal += afirmacoes + " ";
     atual++;
     mostraPergunta();
